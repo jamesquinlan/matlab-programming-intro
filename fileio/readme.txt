@@ -2,6 +2,7 @@
 # mat225
 # quinlan, j
 
+
 --------------------
 cellnumbers.txt
 --------------------
@@ -13,10 +14,6 @@ The file {cellnumbers.txt} is a list of cell numbers in the 207 area code
 2072666331
 
 Read this file of cell numbers and print each in the form: xxx-xxx-xxxx.
-
-
-
-
 
 
 --------------------
@@ -31,9 +28,6 @@ includes curly brackets at the beginning and end of each line.  For example,
 
 Read the data and remove the curly brackets, store in a matrix and save as
 a {.mat} file.
-
-
-
 
 
 --------------------
