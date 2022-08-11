@@ -29,3 +29,22 @@ At the conclusion of this course students will be able to:
   ISBN = {978-0128154793}
 }
 ```
+
+
+## Topic Schedule
+1. Introduction - variables, numerical expressions, built-in functions 
+2. Vectors and matrices 
+3. Scripts, algorithms, and user-defined functions 
+4. Selection Statements 
+5. Loops 
+6. Loops (Exam 1) 
+7. Program organization, scope, debugging techniques 
+8. Text manipulation 
+9. Data structures 
+10. File I/O 
+11. Variable argument functions, nested functions, recursive functions
+12. Recursive functions (cont.) (Exam 2) 
+13. Graphics: Plotting data 
+14. Introduction to Classes 
+15. App Designer
+
