@@ -1,5 +1,5 @@
 # MAT225 - Programming with MATLAB
-Course materials for Intro. to Programming (w MATLAB)
+
 
 ## Course description
 This course focuses on the fundamental concepts of computer programming and the development of computer programs using MATLAB programming environment. The overall objectives are to learn essential computer programming concepts and to apply these concepts in computer-based problem solving. The course includes the fundamentals of flow-charting, decision structures, sequential execution, repetition, subroutines, functions, user interface design, and data structures. There will be some emphasis on the development of computer programs that handle numerical data. The course incorporates mathematical topics such as matrix algebra, polynomial interpolation, linear and non-linear algebraic systems, correlation and regression, time series, gradient vectors, and contour plots to illustrate programming concepts. This course progresses from the development of simple concept-driven programs to more complicated programs that read, manipulate, display, and store data. MAT 225 is appropriate for mathematics and science majors and minors; MAT 525 includes advanced programming work for graduate students. 3.000 Credit hours
