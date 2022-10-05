@@ -155,6 +155,11 @@ rainfall total for all years.
 R = [25 33 29 42;53 44 40 56];
 [~,I] = max(sum(R,2));
 
+% Alternatively
+find(sum(R,2) == max(sum(R,2)));
+
+% Alt 2. 
+[district, ~] = find(R==max(R(:)));
 
 
 %% #48. 
