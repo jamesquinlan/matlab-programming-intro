@@ -46,7 +46,8 @@ exam = struct('n',[]);
 
 
 % ----- PROBLEM ----- %
-\1 Suppose there (already) exists a text file, {\tt number.txt}, containing a list of positive integers.  Read this file and select a random entry, then store that value in \texttt{n} from Problem \ref{pro1}   
+\1 Suppose there (already) exists a text file, {\tt number.txt}, containing a list of positive integers.  
+Read this file and select a random entry, then store that value in \texttt{n} from Problem \ref{pro1}   
 
 
 \if \sols1
@@ -84,7 +85,8 @@ exam.n = nums(randele);
 
 
 % ----- PROBLEM ----- %
-\1 Create a random integer vector over the range $-10$ to  $10$ of length \texttt{n} from Problem \ref{pro1}  Store this vector in the the \texttt{exam} structure in a field named {\tt x}.
+\1 Create a random integer vector over the range $-10$ to  $10$ of length \texttt{n} from Problem \ref{pro1}  
+Store this vector in the the \texttt{exam} structure in a field named {\tt x}.
 
 \if \sols1
 % Solution
@@ -136,7 +138,8 @@ end
 
 
 % ----- PROBLEM ----- %
-\1\label{proby} Change every entry of {\tt x} in the {\tt exam} structure to be positive (e.g., $-12 \to 12$).  Store this ``positives'' vector in a field named {\tt y}.
+\1\label{proby} Change every entry of {\tt x} in the {\tt exam} structure to be positive (e.g., $-12 \to 12$).  
+Store this ``positives'' vector in a field named {\tt y}.
 
 \if \sols1
 % Solution
@@ -228,7 +231,8 @@ fclose(fid);
  
 
 % ----- PROBLEM ----- %
-\1 Write code to determine \underline{how many terms} in the sequence $3k^2$, for $k$ equal to the elements of the ``positives'' vector {\tt y} are required for the sum of the terms to exceed $100 \cdot n$ where $n$ is the length of this list.
+\1 Write code to determine \underline{how many terms} in the sequence $3k^2$, for $k$ equal to the elements of the 
+``positives'' vector {\tt y} are required for the sum of the terms to exceed $100 \cdot n$ where $n$ is the length of this list.
 Store this value in the {\tt exam} structure in a field named {\tt num\_terms}.  
 
 \if \sols1
@@ -260,7 +264,9 @@ fprintf('It takes %d terms to exceed that value.\n\n', numterms);
 
 
 % ----- PROBLEM ----- %
-\1  Represent the following data on Homer J. Simpson that includes (name, street address, city, ages of everyone in household, dog's name, and beers per day of the week)  using a cell array.  \underline{Note} the apostrophe in the dog's name.  Then specify the code needed to find the age of Homer's kid Bart, who is $10$ years old.   
+\1  Represent the following data on Homer J. Simpson that includes (name, street address, city, ages of everyone in household,
+ dog's name, and beers per day of the week)  using a cell array.  \underline{Note} the apostrophe in the dog's name.  
+Then specify the code needed to find the age of Homer's kid Bart, who is $10$ years old.   
 \begin{table}[htbp]
   \centering
   \begin{tabular}{lll} % column spec
