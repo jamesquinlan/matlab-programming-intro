@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2018b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S1 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: bold; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S5 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S6 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S8 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S10 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234001159668px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S11 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S12 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 6px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S13 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 6px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S14 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S15 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }</style></head><body><div class = rtcContent><h2  class = 'S0'><span>Lesson 4: Input/Output</span></h2><h4  class = 'S1'><span></span></h4><h4  class = 'S1'><span>Topics:</span></h4><ul  class = 'S2'><li  class = 'S3'><span>Obtaining input from user</span></li><li  class = 'S3'><span>Displaying output</span></li><li  class = 'S3'><span>Read and Write to file</span></li></ul><div  class = 'S4'><span></span></div><div  class = 'S4'><span style=' font-weight: bold;'>MATLAB Commands</span><span>:</span></div><ol  class = 'S2'><li  class = 'S3'><span>input()</span></li><li  class = 'S3'><span>disp()</span></li><li  class = 'S3'><span>fprintf()</span></li><li  class = 'S3'><span>save()</span></li><li  class = 'S3'><span>load()</span></li></ol><div  class = 'S4'><span></span></div><div  class = 'S4'><span style=' font-weight: bold;'>Book Sections</span><span>:  3.1 - 3.4, 3.6</span></div><h2  class = 'S0'><span>1. Input Command</span></h2><div  class = 'S4'><span>MATLAB's input command provides a means to obtain input from the user.  </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Numerical input</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=input(</span><span style="color: rgb(160, 32, 240);">'Prompt the user with some text: '</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Vector input</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=input(</span><span style="color: rgb(160, 32, 240);">'Prompt: '</span><span>); </span><span style="color: rgb(34, 139, 34);">% e.g.,  [1,2,3]</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Character input</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=input(</span><span style="color: rgb(160, 32, 240);">'Prompt the user with some text: '</span><span>,</span><span style="color: rgb(160, 32, 240);">'s'</span><span>);</span></span></div></div></div><div  class = 'S8'><span> </span></div><div  class = 'S4'><span></span></div><h2  class = 'S0'><span>2. Disp(lay) Command</span></h2><div  class = 'S4'><span>MATLAB's disp() command provides a means to display output from the user or program.  Note: disp() does not show the variable name.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% You should read the help file</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">disp</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="7677452A" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="171" data-hashorizontaloverflow="false" data-testid="output_0" style="max-height: 261px; width: 834px;"><div class="textElement"> <strong>disp</strong> Display array.
+    <strong>disp</strong>(X) displays array X without printing the array name or 
+    additional description information such as the size and class name.
+    In all other ways it's the same as leaving the semicolon off an
+    expression except that nothing is shown for empty arrays.
+ 
+    If X is a string or character array, the text is displayed.
+ 
+    See also fprintf, sprintf, int2str, num2str, rats, format, details.
+
+    Reference page for disp
+    Other functions named disp</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>disp(5);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="CFF9A09D" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_1" style="max-height: 261px; width: 834px;"><div class="textElement">     5</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>x=5;</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>disp(x);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="0FF2A585" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_2" style="max-height: 261px; width: 834px;"><div class="textElement">     5</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>x=</span><span style="color: rgb(160, 32, 240);">'String'</span><span>;</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>disp(x);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="223EFBB5" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_3" style="max-height: 261px; width: 834px;"><div class="textElement">String</div></div></div></div><div class="inlineWrapper"><div  class = 'S12'></div></div></div><div  class = 'S8'><span> </span></div><h2  class = 'S0'><span>3. Format print</span></h2><div  class = 'S4'><span>MATLAB's fprintf() command provides a means to display or write output from the user or program to the screen or a </span><span style=' font-weight: bold;'>file</span><span>.  </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% You should read the help file</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">fprintf</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement scrollableOutput" uid="ADD39640" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="857" data-hashorizontaloverflow="false" data-testid="output_4" style="max-height: 261px; width: 834px;"><div class="textElement"> <strong>fprintf</strong> Write formatted data to text file.
+    <strong>fprintf</strong>(FID, FORMAT, A, ...) applies the FORMAT to all elements of array A and
+    any additional array arguments in column order, and writes the data to a text
+    file.  FID is an integer file identifier.  Obtain FID from FOPEN, or set it to 1
+    (for standard output, the screen) or 2 (standard error). <strong>fprintf</strong> uses the
+    encoding scheme specified in the call to FOPEN.
+ 
+    <strong>fprintf</strong>(FORMAT, A, ...) formats data and displays the results on the screen.
+ 
+    COUNT = <strong>fprintf</strong>(...) returns the number of bytes that <strong>fprintf</strong> writes.
+ 
+    FORMAT is a character vector that describes the format of the output fields, and
+    can include combinations of the following:
+ 
+       * Conversion specifications, which include a % character, a
+         conversion character (such as d, i, o, u, x, f, e, g, c, or s), and optional
+         flags, width, and precision fields.  For more details, type "doc fprintf" at
+         the command prompt.
+ 
+       * Literal text to print.
+ 
+       * Escape characters, including:
+             \b     Backspace            ''   Single quotation mark
+             \f     Form feed            %%   Percent character
+             \n     New line             \\   Backslash
+             \r     Carriage return      \xN  Hexadecimal number N
+             \t     Horizontal tab       \N   Octal number N
+         For most cases, \n is sufficient for a single line break. However, if you
+         are creating a file for use with Microsoft Notepad, specify a combination of
+         \r\n to move to a new line.
+ 
+    Notes:
+ 
+    If you apply an integer or text conversion to a numeric value that contains a
+    fraction, MATLAB overrides the specified conversion, and uses %e.
+ 
+    Numeric conversions print only the real component of complex numbers.
+ 
+    Example: Create a text file called exp.txt containing a short table of the
+    exponential function.
+ 
+        x = 0:.1:1;
+        y = [x; exp(x)];
+        fid = fopen('exp.txt','w');
+        fprintf(fid,'%6.2f  %12.8f\n',y);
+        fclose(fid);
+ 
+    Examine the contents of exp.txt:
+ 
+        type exp.txt
+ 
+    MATLAB returns:
+           0.00    1.00000000
+           0.10    1.10517092
+                ...
+           1.00    2.71828183
+ 
+    See also fopen, fclose, fscanf, fread, fwrite, sprintf, disp.
+
+    Reference page for fprintf
+    Other functions named fprintf</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Useful syntax used in fprintf</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% \t = Tab</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% \n = New line</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% %i = integer</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% %#.#f = floating point</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>vol=10;</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The volume is %i\n'</span><span>,vol);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="86CE97BC" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_5" style="max-height: 261px; width: 834px;"><div class="textElement">The volume is 10</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Show value of pi</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The value of pi is %4.5f\n'</span><span>,pi)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="E7D07543" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_6" style="max-height: 261px; width: 834px;"><div class="textElement">The value of pi is 3.14159</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% For floating point numbers, the first</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% number after the % symbol is the field</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% size, the minimum number of characters</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% to print.  </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% To see the difference, try the following:</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The value of pi is %1.4f\n'</span><span>,pi)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="5060D912" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_7" style="max-height: 261px; width: 834px;"><div class="textElement">The value of pi is 3.1416</div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S13'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The value of pi is %8.4f\n'</span><span>,pi)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="08E6F6DA" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_8" style="max-height: 261px; width: 834px;"><div class="textElement">The value of pi is   3.1416</div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S13'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The value of pi is %12.4f\n'</span><span>,pi)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="EDAF46EC" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="18" data-hashorizontaloverflow="false" data-testid="output_9" style="max-height: 261px; width: 834px;"><div class="textElement">The value of pi is       3.1416</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% The value after the decimal is the precision, </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% that is the number of digits to display after</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% the decimal (obvious).</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% If the vector has multiple data in a row</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% put the place-holders for each number.  </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>x=[pi 2*pi];</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>fprintf(</span><span class="warning_squiggle_rte">[</span><span style="color: rgb(160, 32, 240);">'The values of x are %1.3f and %1.3f \n '</span><span>],x);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="A0D0DB94" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="31" data-hashorizontaloverflow="false" data-testid="output_10" style="max-height: 261px; width: 834px;"><div class="textElement">The values of x are 3.142 and 6.283 
+ </div></div></div></div></div><div  class = 'S8'><span> NOTE: the fprintf() function can be used to write to a file too, but we will see that later. </span></div><div  class = 'S4'><span></span></div><div  class = 'S4'><span></span></div><h2  class = 'S14'><span>4. Saving and loading stored variables</span></h2><div  class = 'S4'><span>Saving variables is often desired.  Loading a saved variable is therefore also a needed operation.  The two functions to handle these operations are </span><span style=' font-weight: bold;'>save</span><span> and </span><span style=' font-weight: bold;'>load</span><span>.</span></div><h3  class = 'S15'><span>4.1 Saving workspace variables</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% You should read the help file</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">save</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement scrollableOutput" uid="288739F7" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="2103" data-hashorizontaloverflow="false" data-testid="output_11" style="max-height: 261px; width: 834px;"><div class="textElement"> <strong>save</strong> Save workspace variables to file. 
+    <strong>save</strong>(FILENAME) stores all variables from the current workspace in a
+    MATLAB formatted binary file (MAT-file) called FILENAME. Specify 
+    FILENAME as a character vector or a string scalar. For example, specify
+    FILENAME as 'myFile.mat' or "myFile.mat".
+ 
+    <strong>save</strong>(FILENAME,VARIABLES) stores only the specified variables. Specify 
+    FILENAME and VARIABLES as character vectors or string scalars.
+ 
+    <strong>save</strong>(FILENAME,'-struct',STRUCTNAME,FIELDNAMES) stores the fields of the
+    specified scalar structure as individual variables in the file. If you 
+    include the optional FIELDNAMES, the <strong>save</strong> function stores only the
+    specified fields of the structure.  You cannot specify VARIABLES and 
+    the '-struct' keyword in the same call to <strong>save</strong>.
+ 
+    <strong>save</strong>(FILENAME, ..., '-append') adds new variables to an existing file.
+    You can specify '-append' with additional inputs such as VARIABLES,
+    '-struct', FORMAT, or VERSION.
+ 
+    <strong>save</strong>(FILENAME, ..., FORMAT) saves in the specified format: '-mat' or
+    '-ascii'.
+    You can specify FORMAT with additional inputs such as VARIABLES,
+    '-struct', '-append', or VERSION.
+ 
+    <strong>save</strong>(FILENAME, ..., VERSION) saves to MAT-files in the specified
+    version: '-v4', '-v6', '-v7', or '-v7.3'.
+    You can specify VERSION with additional inputs such as VARIABLES,
+    '-struct', '-append', '-nocompression', or FORMAT.
+ 
+    <strong>save</strong>(FILENAME, ..., '-nocompression', '-v7.3') saves to MAT-files version 7.3
+    without compression.
+    You can specify '-nocompression' with additional inputs such as VARIABLES and
+    '-append'. The '-nocompression' option is only supported for MAT-files version 7.3.
+ 
+    <strong>save</strong> FILENAME ... is the command form of the syntax, for convenient 
+    saving from the command line.  With command syntax, you do not need to
+    enclose FILENAME in single or double quotation marks.  Separate inputs 
+    with spaces instead of commas.  Do not use command syntax if inputs 
+    such as FILENAME are variables.
+ 
+    Inputs:
+ 
+    FILENAME: If you do not specify FILENAME, the <strong>save</strong> function saves to a
+    file named matlab.mat.  If FILENAME does not include an extension and 
+    the value of format is '-mat' (the default), MATLAB appends .mat. If 
+    filename does not include a full path, MATLAB saves in the current
+    folder. You must have permission to write to the file.
+ 
+    VARIABLES:  Save only selected variables from the workspace.
+    Use one of the following forms:
+ 
+        V1, V2, ...              Save the listed variables. Use the '*'
+                                 wildcard to match patterns.  For example,
+                                 save('A*') saves all variables that start
+                                 with A.
+        '-regexp', EXPRESSIONS   Save only the variables that match the
+                                 specified regular expressions. <strong>save</strong> treats
+                                 all inputs as regular expressions except
+                                 the optional FILENAME and STRUCTNAME.  The
+                                 FILENAME input must appear first.  For
+                                 more information on regular expressions,
+                                 type "doc regexp" at the command prompt.
+ 
+    '-struct', STRUCTNAME, FIELDNAMES:  Save the fields of a scalar
+    structure as individual variables in the file.  FIELDNAMES is optional; 
+    specify to save only selected fields.  FIELDNAMES use the same forms as
+    VARIABLES.
+ 
+    '-append': Add data to an existing file.  For MAT-files, '-append' adds
+    new variables to the file or replaces the saved values of existing
+    variables with values in the workspace.  For ASCII files, '-append'
+    adds data to the end of the file.
+ 
+    FORMAT: Specify the format of the file, regardless of any specified
+    extension.  Use one of the following combinations:
+ 
+        '-mat'                        Binary MAT-file format (default).
+        '-ascii'                      8-digit ASCII format.
+        '-ascii', '-tabs'             Tab-delimited 8-digit ASCII format.
+        '-ascii', '-double'           16-digit ASCII format.
+        '-ascii', '-double', '-tabs'  Tab-delimited 16-digit ASCII format.
+ 
+        For ASCII file formats, the <strong>save</strong> function has the following
+        limitations:
+        * Each variable must be a two-dimensional double or char array.
+        * MATLAB translates characters to their corresponding internal
+          ASCII codes.  For example, 'abc' appears in an ASCII file as:
+              9.7000000e+001  9.8000000e+001  9.9000000e+001
+        * The output includes only the real component of complex numbers.
+        * If you plan to use the LOAD function to read the file, all
+          variables must have the same number of columns.
+ 
+    '-nocompression': Save data to a MAT-file without compression. The
+    '-nocompression' option is only supported for MAT-files version 7.3.
+ 
+    VERSION: Create a MAT-file that you can load into an earlier version of
+    MATLAB or that supports specific features.  The following table shows 
+    the available MAT-file version options and the corresponding supported
+    features.
+ 
+             | Can Load in  |
+    Option   | Versions     | Supported Features
+    ---------+--------------+----------------------------------------------
+    '-v7.3'  | 7.3 or later | Version 7.0 features plus support for
+             |              | data items greater than or equal to 2GB on
+             |              | 64-bit systems. This version also supports 
+             |              | saving variables without compression using 
+             |              | the '-nocompression' flag. 
+    ---------+--------------+----------------------------------------------
+    '-v7'    | 7.0 or later | Version 6 features plus data compression and
+             |              | Unicode character encoding
+    ---------+--------------+----------------------------------------------
+    '-v6'    | 5 or later   | Version 4 features plus N-dimensional arrays,
+             |              | cell and structure arrays, and variable names
+             |              | greater than 19 characters
+    ---------+--------------+----------------------------------------------
+    '-v4'    | all          | Two-dimensional double, character, and
+             |              | sparse arrays
+ 
+    If any data items require features that the specified version does not
+    support, MATLAB does not save those items and issues a warning. You 
+    cannot specify a version later than your version of MATLAB software.
+ 
+    To view or set the default version for MAT-files, select
+    File &gt; Preferences &gt; General &gt; MAT-Files.
+ 
+    Examples:
+ 
+    % Save all variables from the workspace to test.mat:
+    save test.mat
+ 
+    % Save two variables, where FILENAME is a variable:
+    savefile = 'pqfile.mat';
+    p = rand(1, 10);
+    q = ones(10);
+    save(savefile, 'p', 'q');
+ 
+    % Save the fields of a structure as individual variables:
+    s1.a = 12.7;
+    s1.b = {'abc', [4 5; 6 7]};
+    s1.c = 'Hello!';
+    save('newstruct.mat', '-struct', 's1');
+ 
+    % Save variables whose names contain digits:
+    save myfile.mat -regexp \d
+ 
+    See also load, matfile, whos, regexp, hgsave, saveas, workspace, clear.
+
+    Reference page for save
+    Other functions named save</div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize some variables</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>a=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>b=2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>c=3;</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Save a single variable by its name</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">a</span><span>    </span><span style="color: rgb(34, 139, 34);">% command form</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>save(</span><span style="color: rgb(160, 32, 240);">'a'</span><span>) </span><span style="color: rgb(34, 139, 34);">% function form</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsErrorElement" uid="7629E1EA" data-scroll-top="null" data-scroll-left="null" data-width="804" data-height="30" data-hashorizontaloverflow="false" data-testid="output_12" style="max-height: 261px; width: 834px;"><div class="diagnosticMessage-wrapper diagnosticMessage-errorType"><div class="diagnosticMessage-messagePart">Error using save<br>Must be a string scalar or character vector.</div><div class="diagnosticMessage-stackPart"></div></div></div></div></div><div class="inlineWrapper"><div  class = 'S11'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Save variable to a file; save(FILENAME,VARIABLE)</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save(</span><span style="color: rgb(160, 32, 240);">'myVariable'</span><span>,</span><span style="color: rgb(160, 32, 240);">'a'</span><span>)  </span><span style="color: rgb(34, 139, 34);">% function form</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">myVariable a</span><span>       </span><span style="color: rgb(34, 139, 34);">% command form</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Save all workspace variables</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% save(FILENAME)</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Save many workspace variables</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% save(FILENAME,VARIABLES)</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% NOTE: filename and variables need to be </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%       in single quotes in function form</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ------------------------------------------ %</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Variables can be saved (and appended) to </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% binary files (default), or ascii file types</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% such as .txt or .dat.</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Example using function form and command form</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% txt and dat file extensions.</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save(</span><span style="color: rgb(160, 32, 240);">'abc.txt'</span><span>,</span><span style="color: rgb(160, 32, 240);">'a'</span><span>,</span><span style="color: rgb(160, 32, 240);">'b'</span><span>,</span><span style="color: rgb(160, 32, 240);">'c'</span><span>,</span><span style="color: rgb(160, 32, 240);">'-ascii'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">-ascii abc.dat a b c</span></span></div></div></div><div  class = 'S8'><span></span></div><h3  class = 'S15'><span>4.1 Loading variables</span></h3><div  class = 'S4'><span>Previously saved variables can be loaded in the event that workspace variables are cleared (e.g., shutdown/restart).</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Create variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>a=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Display variable </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>disp(a);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Save variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">a </span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Clear variable from workspace</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>clear </span><span style="color: rgb(160, 32, 240);">a</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Check to be sure a no longer exists</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>whos</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Load variable back into the workspace</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>load </span><span style="color: rgb(160, 32, 240);">a.mat</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%</span></span></div></div></div><div  class = 'S4'><span></span></div><h4  class = 'S1'><span>4.1.1 Appending data to file</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Append data to dat file</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>mat1=rand(2,3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>mat2=rand(3,3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">randmatrices.dat mat1 -ascii</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>save </span><span style="color: rgb(160, 32, 240);">randmatrices.dat mat2 -append -ascii</span></span></div></div><div class="inlineWrapper"><div  class = 'S6'></div></div><div class="inlineWrapper"><div  class = 'S7'></div></div></div></div><br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Lesson 4: Input/Output
+%% 
+%% Topics:
+% * Obtaining input from user
+% * Displaying output
+% * Read and Write to file
+% 
+% 
+% 
+% *MATLAB Commands*:
+% 
+% # input()
+% # disp()
+% # fprintf()
+% # save()
+% # load()
+% 
+% 
+% 
+% *Book Sections*:  3.1 - 3.4, 3.6
+%% 1. Input Command
+% MATLAB's input command provides a means to obtain input from the user.  
+
+% Numerical input
+x=input('Prompt the user with some text: ');
+
+% Vector input
+x=input('Prompt: '); % e.g.,  [1,2,3]
+
+% Character input
+x=input('Prompt the user with some text: ','s');
+%% 
+%  
+% 
+% 
+%% 2. Disp(lay) Command
+% MATLAB's disp() command provides a means to display output from the user or 
+% program.  Note: disp() does not show the variable name.
+
+% You should read the help file
+help disp
+
+disp(5);
+
+x=5;
+disp(x);
+
+x='String';
+disp(x);
+
+%% 
+%  
+%% 3. Format print
+% MATLAB's fprintf() command provides a means to display or write output from 
+% the user or program to the screen or a *file*.  
+
+% You should read the help file
+help fprintf
+
+% Useful syntax used in fprintf
+% \t = Tab
+% \n = New line
+% %i = integer
+% %#.#f = floating point
+
+vol=10;
+fprintf('The volume is %i\n',vol);
+
+% Show value of pi
+fprintf('The value of pi is %4.5f\n',pi)
+
+% For floating point numbers, the first
+% number after the % symbol is the field
+% size, the minimum number of characters
+% to print.  
+
+% To see the difference, try the following:
+fprintf('The value of pi is %1.4f\n',pi)
+fprintf('The value of pi is %8.4f\n',pi)
+fprintf('The value of pi is %12.4f\n',pi)
+
+% The value after the decimal is the precision, 
+% that is the number of digits to display after
+% the decimal (obvious).
+
+
+% If the vector has multiple data in a row
+% put the place-holders for each number.  
+
+x=[pi 2*pi];
+fprintf(['The values of x are %1.3f and %1.3f \n '],x);
+%% 
+%  NOTE: the fprintf() function can be used to write to a file too, but 
+% we will see that later. 
+% 
+% 
+% 
+% 
+%% 4. Saving and loading stored variables
+% Saving variables is often desired.  Loading a saved variable is therefore 
+% also a needed operation.  The two functions to handle these operations are *save* 
+% and *load*.
+%% 4.1 Saving workspace variables
+%%
+% You should read the help file
+help save
+
+% Initialize some variables
+a=1;
+b=2;
+c=3;
+
+% Save a single variable by its name
+save a    % command form
+save('a') % function form
+
+% Save variable to a file; save(FILENAME,VARIABLE)
+save('myVariable','a')  % function form
+save myVariable a       % command form
+
+% Save all workspace variables
+% save(FILENAME)
+
+% Save many workspace variables
+% save(FILENAME,VARIABLES)
+
+% NOTE: filename and variables need to be 
+%       in single quotes in function form
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH %
+
+
+% Variables can be saved (and appended) to 
+% binary files (default), or ascii file types
+% such as .txt or .dat.
+
+
+% Example using function form and command form
+% txt and dat file extensions.
+save('abc.txt','a','b','c','-ascii')
+save -ascii abc.dat a b c
+%% 
+% 
+%% 4.1 Loading variables
+% Previously saved variables can be loaded in the event that workspace variables 
+% are cleared (e.g., shutdown/restart).
+
+% Create variable
+a=1;
+
+% Display variable 
+disp(a);
+
+% Save variable
+save a 
+
+% Clear variable from workspace
+clear a
+
+% Check to be sure a no longer exists
+whos
+
+% Load variable back into the workspace
+load a.mat
+
+%
+%% 
+% 
+%% 4.1.1 Appending data to file
+%%
+% Append data to dat file
+
+mat1=rand(2,3);
+mat2=rand(3,3);
+
+save randmatrices.dat mat1 -ascii
+
+save randmatrices.dat mat2 -append -ascii
+ ##### SOURCE END #####
+ 
+ -->
+
+
+
+<div style="border-top: 1px solid #ccc;padding:20px 0px 0px 0px;"></div>
+<i>
+    <a href="http://www.unemath.com/quinlan/mat225/">Return to MAT225</a>
+</i>
+</div>
+
+
+
+
+</body></html>

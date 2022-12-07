@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2018b"><title>Text Manipulation</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.7999992370605px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: normal; text-align: left;  }
+.S1 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: bold; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S5 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S6 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S10 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S11 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Text Manipulation</span></h1><h4  class = 'S1'><span>Topics:</span></h4><ul  class = 'S2'><li  class = 'S3'><span>Characters, Character vectors, and string arrays</span></li><li  class = 'S3'><span>Operations on text</span></li><li  class = 'S3'><span>"is" function for text</span></li><li  class = 'S3'><span>Conversion between text and numbers</span></li></ul><div  class = 'S4'><span style=' font-weight: bold;'>Book Sections</span><span>:  7.1 - 7.4</span></div><div  class = 'S4'><span></span></div><h2  class = 'S5'><span>1. Characters, Character Vectors, and String Arrays</span></h2><div  class = 'S4'><span>Files often contain characters and numbers.  When reading a file, it is often necessary to parse these elements line by line.</span></div><div  class = 'S4'><span style=' font-weight: bold;'>Definition</span><span>:  Individual characters, </span><span style=' font-weight: bold;'>char</span><span>, are stored using single quotation marks.  Characters include: alphabet, digits, punctuation marks, white space (e.g., space, tab), and control characters (e.g., tab).</span></div><div  class = 'S4'><span></span></div><h3  class = 'S6'><span>1.1  Character vectors</span></h3><div  class = 'S4'><span>A character vector consists of any number of characters (possibly none) enclosed by single quotes.   Effectively, each character is indexed in an array.  For example, </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% 1 x 5 character array (vector)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>charArray=</span><span style="color: rgb(160, 32, 240);">'Hello'</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Here are more character arrays</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>arr1=</span><span style="color: rgb(160, 32, 240);">''</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>arr2=</span><span style="color: rgb(160, 32, 240);">'x'</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>arr3=</span><span style="color: rgb(160, 32, 240);">'123'</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Check the size of these arrays</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>size(charArray);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Try to transpose</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>charArray'</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><h3  class = 'S6'><span>1.2 String array</span></h3><div  class = 'S4'><span> Introducted in 2016b, </span><span style=' font-weight: bold;'>string</span><span> type can store word(s).  A string is enclosed with double quoation marks.  For example, </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ALWAYS</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">string</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% A string</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=</span><span style="color: rgb(160, 32, 240);">"Hello"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Note the size is 1 x 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>size(x);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% To find the length, use strlength() function.</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strlength(x);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% You can extract individual characters by using curly brackets followed by</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% parenthesis.</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x{1}(3);    </span><span style="color: rgb(34, 139, 34);">% returns 'l'</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x{1}(1);    </span><span style="color: rgb(34, 139, 34);">% returns 'H'</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Create a vector of strings</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>cities = [</span><span style="color: rgb(160, 32, 240);">"Boston"</span><span>, </span><span style="color: rgb(160, 32, 240);">"New York"</span><span>, </span><span style="color: rgb(160, 32, 240);">"Chicago"</span><span>]</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>cities(1)   </span><span style="color: rgb(34, 139, 34);">% returns string</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>cities{2}   </span><span style="color: rgb(34, 139, 34);">% returns character array</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><h2  class = 'S5'><span>2.  Operations on Text</span></h2><div  class = 'S4'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Concatenate strings:  + </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(160, 32, 240);">"Hello"</span><span>+</span><span style="color: rgb(160, 32, 240);">"World"</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Create blanks: blanks function</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>blanks(5);  </span><span style="color: rgb(34, 139, 34);">% 5 blank spaces</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Create string from character array</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte warningHighlight">string(</span><span class="warning_squiggle_rte warningHighlight" style="color: rgb(160, 32, 240);">'hello'</span><span class="warning_squiggle_rte warningHighlight">)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><h3  class = 'S6'><span>2.1 Creating and Concatenating</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Horizontal concatenate</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strcat(</span><span style="color: rgb(160, 32, 240);">'Red'</span><span>,</span><span style="color: rgb(160, 32, 240);">'Yellow'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Append string arrays, +</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(160, 32, 240);">"Red "</span><span>+ </span><span style="color: rgb(160, 32, 240);">"Yellow"</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><h3  class = 'S6'><span>2.2  Removing Characters</span></h3><div  class = 'S4'><span>Functions that will remove trailing and/or leadning spaces (blanks) from strings and character arrays: deblank, strtrim, strip, erase.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Remove trailing spaces (not leading blanks)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>deblank(</span><span style="color: rgb(160, 32, 240);">"   Hello   "</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Remove both leading and trailing blanks (not middle)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strtrim(</span><span style="color: rgb(160, 32, 240);">"    Hello  World    "</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Remove unwanted characters</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strip(</span><span style="color: rgb(160, 32, 240);">"xxxHello World!x"</span><span>,</span><span style="color: rgb(160, 32, 240);">"x"</span><span>);    </span><span style="color: rgb(34, 139, 34);">% 2nd argument is what to remove</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Remove all characters from string</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>erase(</span><span style="color: rgb(160, 32, 240);">"xxxabcxdefgxkjkjdxkjkjsk"</span><span>, </span><span style="color: rgb(160, 32, 240);">"x"</span><span>);  </span><span style="color: rgb(34, 139, 34);">% removes x from string</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><h3  class = 'S6'><span>2.3 Change case</span></h3><div  class = 'S4'><span>Make string all upper or lower case</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>x=</span><span style="color: rgb(160, 32, 240);">"Hello"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>upper(x);   </span><span style="color: rgb(34, 139, 34);">% all upper case</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>lower(x);   </span><span style="color: rgb(34, 139, 34);">% all lower case</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><h3  class = 'S6'><span>2.4  Comparing Strings</span></h3><div  class = 'S4'><span>MATLAB has several functions to compare strings and character arrays.  These functions return a logical value. </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Equality</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strcmp(</span><span style="color: rgb(160, 32, 240);">'cat'</span><span>, </span><span style="color: rgb(160, 32, 240);">'car'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Compare first n characters</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>strncmp(</span><span style="color: rgb(160, 32, 240);">'cat'</span><span>, </span><span style="color: rgb(160, 32, 240);">'car'</span><span>, 2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span> </span></div><h3  class = 'S11'><span>2.5  IS Function</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% IS functions are common in nearly all programming languages.  </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% They return a boolean value based on the results of a test, typically</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% the 'one' appended to the IS function.  </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% For example: isnumeric, islogical, isjava</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% In particular, ischar, isstring.</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=</span><span style="color: rgb(160, 32, 240);">"Hello"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>y=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>isstring(x) </span><span style="color: rgb(34, 139, 34);">% Is x a string type?  Yes</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>isstring(y) </span><span style="color: rgb(34, 139, 34);">% Is y a string type?  No</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><h3  class = 'S11'><span></span></h3><h3  class = 'S6'><span>2.6  Converting between types (string to numeric)</span></h3><div  class = 'S4'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>x=</span><span style="color: rgb(160, 32, 240);">"3"</span><span>;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% String to Double</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>y=</span><span>str2double(</span><span style="color: rgb(160, 32, 240);">"3"</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Double to String</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>z=num2str(y)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% compare</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>strcmp(x,z)</span></span></div></div></div><h3  class = 'S11'><span></span></h3><h3  class = 'S6'><span>2.7  Finding Substrings</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% findstr and strfind</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">findstr</span><span>(</span><span style="color: rgb(160, 32, 240);">'abcde'</span><span>,</span><span style="color: rgb(160, 32, 240);">'d'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">findstr</span><span>(</span><span style="color: rgb(160, 32, 240);">'cd'</span><span>,</span><span style="color: rgb(160, 32, 240);">'abcde'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">findstr</span><span>(</span><span style="color: rgb(160, 32, 240);">'ac'</span><span>,</span><span style="color: rgb(160, 32, 240);">'abcde'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Note: findstr always searches for shorter string in longer string</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div></div><br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Text Manipulation
+%% Topics:
+% * Characters, Character vectors, and string arrays
+% * Operations on text
+% * "is" function for text
+% * Conversion between text and numbers
+% 
+% *Book Sections*:  7.1 - 7.4
+% 
+% 
+%% 1. Characters, Character Vectors, and String Arrays
+% Files often contain characters and numbers.  When reading a file, it is often 
+% necessary to parse these elements line by line.
+% 
+% *Definition*:  Individual characters, *char*, are stored using single quotation 
+% marks.  Characters include: alphabet, digits, punctuation marks, white space 
+% (e.g., space, tab), and control characters (e.g., tab).
+% 
+% 
+%% 1.1  Character vectors
+% A character vector consists of any number of characters (possibly none) enclosed 
+% by single quotes.   Effectively, each character is indexed in an array.  For 
+% example, 
+
+% 1 x 5 character array (vector)
+charArray='Hello';
+
+% Here are more character arrays
+arr1=''
+arr2='x'
+arr3='123'
+
+% Check the size of these arrays
+size(charArray);
+
+% Try to transpose
+charArray'
+
+%% 
+% 
+%% 1.2 String array
+%  Introducted in 2016b, *string* type can store word(s).  A string is enclosed 
+% with double quoation marks.  For example, 
+
+% ALWAYS
+help string
+
+% A string
+x="Hello";
+
+% Note the size is 1 x 1
+size(x);
+
+% To find the length, use strlength() function.
+strlength(x);
+
+% You can extract individual characters by using curly brackets followed by
+% parenthesis.
+
+x{1}(3);    % returns 'l'
+x{1}(1);    % returns 'H'
+
+% Create a vector of strings
+cities = ["Boston", "New York", "Chicago"]
+
+cities(1)   % returns string
+cities{2}   % returns character array
+
+
+%% 
+% 
+%% 2.  Operations on Text
+% 
+
+% Concatenate strings:  + 
+"Hello"+"World"
+
+% Create blanks: blanks function
+blanks(5);  % 5 blank spaces
+
+% Create string from character array
+string('hello')
+
+% 
+
+%% 2.1 Creating and Concatenating
+
+% Horizontal concatenate
+strcat('Red','Yellow')
+
+% Append string arrays, +
+"Red "+ "Yellow"
+
+%% 
+% 
+%% 2.2  Removing Characters
+% Functions that will remove trailing and/or leadning spaces (blanks) from strings 
+% and character arrays: deblank, strtrim, strip, erase.
+
+% Remove trailing spaces (not leading blanks)
+deblank("   Hello   ")
+
+% Remove both leading and trailing blanks (not middle)
+strtrim("    Hello  World    ")
+
+% Remove unwanted characters
+strip("xxxHello World!x","x");    % 2nd argument is what to remove
+
+
+% Remove all characters from string
+erase("xxxabcxdefgxkjkjdxkjkjsk", "x");  % removes x from string
+
+%% 2.3 Change case
+% Make string all upper or lower case
+
+x="Hello";
+
+upper(x);   % all upper case
+lower(x);   % all lower case
+
+%% 2.4  Comparing Strings
+% MATLAB has several functions to compare strings and character arrays.  These 
+% functions return a logical value. 
+
+% Equality
+strcmp('cat', 'car')
+
+% Compare first n characters
+strncmp('cat', 'car', 2);
+
+%% 
+%  
+%% 2.5  IS Function
+%%
+% IS functions are common in nearly all programming languages.  
+% They return a boolean value based on the results of a test, typically
+% the 'one' appended to the IS function.  
+
+% For example: isnumeric, islogical, isjava
+
+% In particular, ischar, isstring.
+
+x="Hello";
+y=1;
+
+isstring(x) % Is x a string type?  Yes
+isstring(y) % Is y a string type?  No
+
+%% 
+%% 2.6  Converting between types (string to numeric)
+% 
+
+x="3";
+
+% String to Double
+y=str2double("3")
+
+% Double to String
+z=num2str(y)
+
+% compare
+strcmp(x,z)
+%% 
+%% 2.7  Finding Substrings
+%%
+% findstr and strfind
+findstr('abcde','d')
+
+findstr('cd','abcde')
+
+findstr('ac','abcde')
+
+% Note: findstr always searches for shorter string in longer string
+##### SOURCE END #####
+--></body></html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2018b"><title>Lesson 6: Decision Structure (Branching)</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.7999992370605px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: normal; text-align: left;  }
+.S1 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: bold; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S5 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S6 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S7 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S10 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S11 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Lesson 6: Decision Structure (Branching)</span></h1><h4  class = 'S1'><span></span></h4><h4  class = 'S1'><span>Topics:</span></h4><ul  class = 'S2'><li  class = 'S3'><span>if-then-else statements</span></li><li  class = 'S3'><span>Relational expressions</span></li><li  class = 'S3'><span>Logical Statements</span></li><li  class = 'S3'><span>Compound Statements</span></li></ul><div  class = 'S4'><span style=' font-weight: bold;'>Learning Outcomes</span><span>:</span></div><ol  class = 'S2'><li  class = 'S3'><span>Represent decisions programmatically</span></li></ol><div  class = 'S4'><span></span></div><div  class = 'S4'><span style=' font-weight: bold;'>Book Sections</span><span>:  4.1 - 4.3</span></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>1. Logical Statements</span></h2><div  class = 'S4'><span>Logical statements, (a.k.a. Boolean Expressions, conditional statements) are frequently used in programming for decision making.  They control the flow of the program in order to execute certain blocks of code depending on the truth value of the expression.</span></div><h3  class = 'S7'><span>1.1 Relational Operators</span></h3><div  class = 'S4'><span>Recall the relational operators previously introduced: </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &lt;         Less than</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &gt;         Greater than</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &lt;=        Less than or equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &gt;=        Greater than or equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ==        Equal   </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ~=        Not Equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S11'><span></span></div><div  class = 'S4'><span>Here are some logical statements that evaluate to TRUE or FALSE:</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>1&lt;2             </span><span style="color: rgb(34, 139, 34);">% True</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>isprime(4)      </span><span style="color: rgb(34, 139, 34);">% False</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>4</span><span class="warning_squiggle_rte">==</span><span>3            </span><span style="color: rgb(34, 139, 34);">% False</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>isinteger(5)    </span><span style="color: rgb(34, 139, 34);">% False (Why?)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>rem(13,4)</span><span class="warning_squiggle_rte warningHighlight">==</span><span>2    </span><span style="color: rgb(34, 139, 34);">% False</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S4'><span></span></div><h2  class = 'S6'><span>2. Compound Statements</span></h2><div  class = 'S4'><span>Logical statements can be compounded using AND and OR statements. </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Syntax for AND:  &amp;&amp;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Syntax for OR:   ||</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Example: AND</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>1&lt;2 &amp;&amp; isinteger(5)     </span><span style="color: rgb(34, 139, 34);">% False</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Example:  OR</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>1&lt;2 || isinteger(5)     </span><span style="color: rgb(34, 139, 34);">% True</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Example: AND and OR</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>1&lt;2 &amp;&amp; (3&lt;4 || 4==3)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Question: Do parenthesis matter?</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S11'><span> </span></div><h2  class = 'S5'><span>3. if-then Statements</span></h2><div  class = 'S4'><span>In MATLAB, you actually do not type "then".  However, you DO need an "end" statement with each if statement.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Basic if-then Statement</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>condition</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% run this </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% This says, if the "condition" is TRUE, then </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% run the code inside (indented).</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Example:</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>x=sin(3);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>x&lt;0.3</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'Statement is true'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S11'><span></span></div><h3  class = 'S7'><span>3.1 Compound Statement</span></h3><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=sin(5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>y=cos(5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% AND</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>x&gt;0 &amp;&amp; y&lt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'Both conditions are true'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% OR</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>x&gt;0 || y&lt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'Either condition is true'</span><span>)</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S4'><span></span></div><h2  class = 'S6'><span>4. if-then-else</span></h2><div  class = 'S4'><span>Many times you will need to explicitly state what will happen when then condition is false.  In these cases, use the "if-then-else" statement.</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Determine if a function value is positive or not</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>x=sin(5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>x&gt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'x is positive'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'x is NOT positive'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><h3  class = 'S7'><span></span></h3><h3  class = 'S7'><span>4.1 if-elseif</span></h3><div  class = 'S4'><span>When there are multiple conditions to check use "elseif".</span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Determine if a value is positive, negative, or zero</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>x=sin(5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>x&lt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'x is less than zero'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>x==0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'x is equal to zero'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>x&gt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'x is greater than zero'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S4'><span></span></div><h2  class = 'S6'><span>5. Examples</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Determine if a number is divisible by 4.</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% For example, 4, 8, 12, 16, 20, 24, ...</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>n=input(</span><span style="color: rgb(160, 32, 240);">'Enter a number'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>rem(n,4)==0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'Your number is a multiple of 4'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S11'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Determine the number of solutions to a quadratic equation </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% a*x^2+b*x+c=0.</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Get the coefficients</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>a=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>b=-5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>c=6;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Calculate the determinant</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>D=b^2-4*a*c;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Decide number of solutions</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>D&lt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'0 Solutions'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>D==0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'1 Solution'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">elseif </span><span>D&gt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'2 Solutions'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div><div  class = 'S11'><span> </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Calculate the area of a circle</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>r=input(</span><span style="color: rgb(160, 32, 240);">'Enter the radius'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Check if radius is a positive number</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">if </span><span>r&gt;0</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    A=pi*r^2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'Radius is invalid'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S10'></div></div></div></div><br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Lesson 6: Decision Structure (Branching)
+%% 
+%% Topics:
+% * if-then-else statements
+% * Relational expressions
+% * Logical Statements
+% * Compound Statements
+% 
+% *Learning Outcomes*:
+% 
+% # Represent decisions programmatically
+% 
+% 
+% 
+% *Book Sections*:  4.1 - 4.3
+%% 
+%% 1. Logical Statements
+% Logical statements, (a.k.a. Boolean Expressions, conditional statements) are 
+% frequently used in programming for decision making.  They control the flow of 
+% the program in order to execute certain blocks of code depending on the truth 
+% value of the expression.
+%% 1.1 Relational Operators
+% Recall the relational operators previously introduced: 
+
+% <         Less than
+% >         Greater than
+% <=        Less than or equal
+% >=        Greater than or equal
+% ==        Equal   
+% ~=        Not Equal
+
+%% 
+% 
+% 
+% Here are some logical statements that evaluate to TRUE or FALSE:
+
+1<2             % True
+isprime(4)      % False
+4==3            % False
+isinteger(5)    % False (Why?)
+rem(13,4)==2    % False
+
+%% 
+% 
+%% 2. Compound Statements
+% Logical statements can be compounded using AND and OR statements. 
+
+% Syntax for AND:  &&
+% Syntax for OR:   ||
+
+% Example: AND
+1<2 && isinteger(5)     % False
+
+% Example:  OR
+1<2 || isinteger(5)     % True
+
+% Example: AND and OR
+1<2 && (3<4 || 4==3)
+
+% Question: Do parenthesis matter?
+
+%% 
+%  
+%% 3. if-then Statements
+% In MATLAB, you actually do not type "then".  However, you DO need an "end" 
+% statement with each if statement.
+
+% Basic if-then Statement
+if condition
+    % run this 
+end
+
+% This says, if the "condition" is TRUE, then 
+% run the code inside (indented).
+
+% Example:
+x=sin(3);
+if x<0.3
+    disp('Statement is true');
+end
+
+%% 
+% 
+%% 3.1 Compound Statement
+
+x=sin(5);
+y=cos(5);
+
+% AND
+if x>0 && y<0
+    disp('Both conditions are true')
+end
+
+
+% OR
+if x>0 || y<0
+    disp('Either condition is true')
+end
+
+%% 
+% 
+%% 4. if-then-else
+% Many times you will need to explicitly state what will happen when then condition 
+% is false.  In these cases, use the "if-then-else" statement.
+
+% Determine if a function value is positive or not
+
+x=sin(5);
+
+if x>0
+    disp('x is positive');
+else
+    disp('x is NOT positive');
+end
+
+%% 
+%% 4.1 if-elseif
+% When there are multiple conditions to check use "elseif".
+
+% Determine if a value is positive, negative, or zero
+
+x=sin(5);
+
+if x<0
+    disp('x is less than zero');
+elseif x==0
+    disp('x is equal to zero');
+elseif x>0
+    disp('x is greater than zero');
+end
+
+%% 
+% 
+%% 5. Examples
+%%
+% Determine if a number is divisible by 4.
+% For example, 4, 8, 12, 16, 20, 24, ...
+n=input('Enter a number');
+
+if rem(n,4)==0
+    disp('Your number is a multiple of 4');
+end
+
+%% 
+% 
+
+% Determine the number of solutions to a quadratic equation 
+% a*x^2+b*x+c=0.
+
+% Get the coefficients
+a=1;
+b=-5;
+c=6;
+
+% Calculate the determinant
+D=b^2-4*a*c;
+
+% Decide number of solutions
+if D<0
+    disp('0 Solutions');
+elseif D==0
+    disp('1 Solution');
+elseif D>0
+    disp('2 Solutions');
+end
+
+%% 
+%  
+
+% Calculate the area of a circle
+
+r=input('Enter the radius');
+
+% Check if radius is a positive number
+if r>0
+    A=pi*r^2;
+else
+    disp('Radius is invalid');
+end
+##### SOURCE END #####
+-->
+
+
+<div style="border-top: 1px solid #ccc;padding:20px 0px 0px 0px;"></div>
+<i>
+    <a href="http://www.unemath.com/quinlan/mat225/">Return to MAT225</a>
+</i>
+</div>
+
+
+
+
+</body></html>

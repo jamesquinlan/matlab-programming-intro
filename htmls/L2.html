@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2018b"><title>Lesson 2: Introduction to MATLAB</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.7999992370605px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: normal; text-align: left;  }
+.S1 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: bold; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S5 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S6 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S10 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234001159668px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S11 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 6px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S12 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S13 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S14 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S15 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px 4px 0px 0px; padding: 6px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Lesson 2: Introduction to MATLAB</span></h1><h4  class = 'S1'><span></span></h4><h4  class = 'S1'><span>Topics:</span></h4><ul  class = 'S2'><li  class = 'S3'><span>Relational Expressions / Relational Operators</span></li><li  class = 'S3'><span>Logical Operators</span></li><li  class = 'S3'><span>Operator precedence rules</span></li><li  class = 'S3'><span>Type casting</span></li><li  class = 'S3'><span>Built-in numerical functions</span></li><li  class = 'S3'><span>Common Pitfalls and Programming Tips</span></li></ul><div  class = 'S4'><span style=' font-weight: bold;'>Learning Outcomes</span><span>:</span></div><ol  class = 'S2'><li  class = 'S3'><span>Become familiar with relational and logical operators</span></li><li  class = 'S3'><span>Cast variables</span></li><li  class = 'S3'><span>Use built-in functions</span></li></ol><div  class = 'S4'><span style=' font-weight: bold;'>Book Sections</span><span>:  1.6 - 1.8</span></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>1. Relational Expressions</span></h2><div  class = 'S4'><span></span></div><div  class = 'S4'><span style=' font-weight: bold;'>Defintion</span><span>: Relational expressions (logical expression, Boolean expression) evaluate to either TRUE or FALSE.</span></div><h4  class = 'S1'><span>1.1 Relational Operators</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &gt;  greater than</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &lt;  less than</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &gt;= greater than or equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &lt;= less than or equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% == equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ~= not equal</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Examples</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=7;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>y=9;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>x&lt;y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="3CF03CFA" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_0" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>x&gt;y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="16B37CFF" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_1" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   0
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>x&lt;=y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="EDCB2694" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_2" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>x~=y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="773E2A91" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_3" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>x</span><span class="warning_squiggle_rte warningHighlight">==</span><span>y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="2CC5B1E5" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_4" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   0
+</div></div></div></div></div><div class="inlineWrapper"><div  class = 'S12'></div></div><div class="inlineWrapper"><div  class = 'S13'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Notice the output as 1 (True) or 0 (False).</span></span></div></div></div><h4  class = 'S1'><span> </span></h4><h4  class = 'S1'><span>1.2 (Short-circuit) Logical Operators</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ||    OR</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &amp;&amp;    AND</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ~     NOT</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>x=5, y=7, z=7</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="A7691934" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_5" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">x = </span></div><div>     5
+</div></div></div><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="882FBF0C" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_6" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">y = </span></div><div>     7
+</div></div></div><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="74E4A5BC" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_7" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">z = </span></div><div>     7
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>(x&lt;10) || (x==z)   </span><span style="color: rgb(34, 139, 34);">% x less than 10 OR x=z</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="80CF23EE" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_8" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>(z&lt;=5) &amp;&amp; (y==z)   </span><span style="color: rgb(34, 139, 34);">% z less than or equal 5 AND y=z</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="F3FE3E71" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_9" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   0
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>~(x&gt;8) &amp;&amp; (z==y)   </span><span style="color: rgb(34, 139, 34);">% x NOT greater than 8 AND z=y</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="C8DB12F9" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_10" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper"><div  class = 'S12'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Note: Only the first expression is evaluated in </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% %     first two expressions</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% XOR function: True if and only if one argument is true</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>xor(3&lt;5,1&lt;7)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="2251CC7D" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_11" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   0
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>xor(3&gt;5,7&lt;1)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="59A3C329" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_12" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>xor(3&gt;5,1&lt;7)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="2D4228D0" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_13" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = <span class="headerElement">logical</span></span></div><div>   1
+</div></div></div></div></div></div><div  class = 'S14'><span> </span></div><h4  class = 'S1'><span>1.3  Operator Precedence Rule</span></h4><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Higest to lowest</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ()</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% ^</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% -, ~</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% *, /,\</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% +, -</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Relational: &lt;,&lt;=, &gt;,&gt;=,==,~=</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &amp;&amp;</span></span></div></div><div class="inlineWrapper"><div  class = 'S13'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% &amp; ||</span></span></div></div></div><div  class = 'S14'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Note</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=4; </span><span style="color: rgb(34, 139, 34);">% x=7 both evaluate true since order is left to right</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>3&lt;</span><span class="warning_squiggle_rte">x</span><span>&lt;5 </span><span style="color: rgb(34, 139, 34);">% is a logical error</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S13'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% 3&lt;x &amp;&amp; x&lt;5</span></span></div></div></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>2 Type Casting and ranges</span></h2><div  class = 'S4'><span>Variables have a "</span><span style=' font-weight: bold;'>type"</span><span>, default number is double.  </span></div><h4  class = 'S1'><span>Variable Types</span></h4><div  class = 'S4'><span>MATLAB has the following basic data types:</span></div><ul  class = 'S2'><li  class = 'S3'><span>Integers (int8, int16, ...)</span></li><li  class = 'S3'><span>Single precision</span></li><li  class = 'S3'><span>Double precision (</span><span style=' font-weight: bold;'>default</span><span>)</span></li><li  class = 'S3'><span>Logical</span></li><li  class = 'S3'><span>Charcter (chr) or string</span></li></ul><div  class = 'S4'><span>The </span><span style=' font-weight: bold;'>range</span><span> of a variable is the smallest and largest value it can take.  For example, uint8 ranges from 0 to 255 since </span><span style="vertical-align:-5px"><img src="data:image/png;base64,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" width="56.5" height="19" /></span><span>.</span></div><div  class = 'S4'><span>Variables of one type can be </span><span style=' font-weight: bold;'>cast</span><span> as another, for example, double as an integer. </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>whos </span><span style="color: rgb(34, 139, 34);">% display variables, size, and type</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% 1.7 Type casting</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=pi;               </span><span style="color: rgb(34, 139, 34);">% double precision</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=single(pi);       </span><span style="color: rgb(34, 139, 34);">% single precision</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=int8(-45)         </span><span style="color: rgb(34, 139, 34);">% 8-bit signed integer</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=uint32(2341)      </span><span style="color: rgb(34, 139, 34);">% 32-bit unsigned (positive) integer</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=</span><span class="warning_squiggle_rte warningHighlight">logical</span><span>(1)        </span><span style="color: rgb(34, 139, 34);">% Logical variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% For more information about these and other data types</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>help </span><span style="color: rgb(160, 32, 240);">datatypes</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span> </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Characters ('x') and Strings ("x")</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>Achar=</span><span style="color: rgb(160, 32, 240);">'hello world'</span><span>      </span><span style="color: rgb(34, 139, 34);">% Use single quotes</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>Astring=</span><span style="color: rgb(160, 32, 240);">"hello world"</span><span>    </span><span style="color: rgb(34, 139, 34);">% Use Double quotes</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span class="warning_squiggle_rte">x</span><span>=</span><span style="color: rgb(160, 32, 240);">'5'</span><span>;                   </span><span style="color: rgb(34, 139, 34);">% Different than x=5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>X=5;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>whos</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S13'></div></div></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>3. Built-in Numerical Functions</span></h2><div  class = 'S4'><span>MATLAB has hundreds of built-in functions.  Here are some basic numerical functions (See also L1.mlx).</span></div><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S15'><span style="white-space: pre;"><span>rem(14,3)       </span><span style="color: rgb(34, 139, 34);">% difference rem(3,14)?</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="380D9C72" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_14" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     2
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>mod(14,3)       </span><span style="color: rgb(34, 139, 34);">% difference mod(3,14)?</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="54E2A4B6" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_15" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     2
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>floor(5.8205)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="D4B202B8" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_16" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     5
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>ceil(5.8205)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="677EC538" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_17" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     6
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>fix(5.8205)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="EB69C194" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_18" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     5
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>fix(-5.8205)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="418D75C6" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_19" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>    -5
+</div></div></div></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>round(5.8205)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="19B5CF3E" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_20" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>     6
+</div></div></div></div></div><div class="inlineWrapper"><div  class = 'S12'><span style="white-space: pre;"><span>round(pi,5)     </span><span style="color: rgb(34, 139, 34);">% round to 5 places</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>sign(-pi)</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsVariableStringElement" uid="A35630B4" data-scroll-top="null" data-scroll-left="null" data-width="769" data-height="34" data-hashorizontaloverflow="false" data-testid="output_21" style="max-height: 261px; width: 799px;"><div class="textElement"><div><span class="variableNameElement">ans = </span></div><div>    -1
+</div></div></div></div></div><div class="inlineWrapper"><div  class = 'S12'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>x=73;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>n=3;</span></span></div></div><div class="inlineWrapper"><div  class = 'S13'><span style="white-space: pre;"><span>nthroot(x,n)    </span><span style="color: rgb(34, 139, 34);">% Nth root function</span></span></div></div></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>Common Pitfalls </span></h2><ol  class = 'S2'><li  class = 'S3'><span>Using = for relational operator</span></li><li  class = 'S3'><span>Compound relations 3&lt;x&lt;5 vs. 3&lt;x &amp;&amp; x&lt;5</span></li><li  class = 'S3'><span>Confusing || and &amp;&amp;</span></li><li  class = 'S3'><span>Confusing the order of arguments when passing to a function, for example rem(3,10) and rem(10,3)</span></li><li  class = 'S3'><span>Confusing / and \ left and right division</span></li><li  class = 'S3'><span>Adding a space in &lt;= (2-character operator)</span></li><li  class = 'S3'><span>Confusing </span><span style=' font-weight: bold;'>xor</span><span> and ||</span></li></ol><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>Exercises</span></h2><ol  class = 'S2'><li  class = 'S3'><span>cos(pi/2)==0</span></li><li  class = 'S3'><span>3 == 5+2</span></li><li  class = 'S3'><span>(10&gt;5)+2</span></li><li  class = 'S3'><span>10&gt;5&gt;2</span></li><li  class = 'S3'><span>Find the numerical equivalent of 'x'</span></li><li  class = 'S3'><span>Which character is 107?</span></li><li  class = 'S3'><span>round(pi,3)</span></li><li  class = 'S3'><span>fix(pi)</span></li></ol></div><br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Lesson 2: Introduction to MATLAB
+%% 
+%% Topics:
+% * Relational Expressions / Relational Operators
+% * Logical Operators
+% * Operator precedence rules
+% * Type casting
+% * Built-in numerical functions
+% * Common Pitfalls and Programming Tips
+% 
+% *Learning Outcomes*:
+% 
+% # Become familiar with relational and logical operators
+% # Cast variables
+% # Use built-in functions
+% 
+% *Book Sections*:  1.6 - 1.8
+%% 
+%% 1. Relational Expressions
+% 
+% 
+% *Defintion*: Relational expressions (logical expression, Boolean expression) 
+% evaluate to either TRUE or FALSE.
+%% 1.1 Relational Operators
+%%
+% >  greater than
+% <  less than
+% >= greater than or equal
+% <= less than or equal
+% == equal
+% ~= not equal
+
+% Examples
+x=7;
+y=9;
+
+x<y
+x>y
+x<=y
+x~=y
+x==y
+
+% Notice the output as 1 (True) or 0 (False).
+%%  
+%% 1.2 (Short-circuit) Logical Operators
+
+% ||    OR
+% &&    AND
+% ~     NOT
+
+x=5, y=7, z=7
+(x<10) || (x==z)   % x less than 10 OR x=z
+(z<=5) && (y==z)   % z less than or equal 5 AND y=z
+~(x>8) && (z==y)   % x NOT greater than 8 AND z=y
+
+% Note: Only the first expression is evaluated in 
+% %     first two expressions
+
+
+% XOR function: True if and only if one argument is true
+xor(3<5,1<7)
+xor(3>5,7<1)
+xor(3>5,1<7)
+%% 
+%  
+%% 1.3  Operator Precedence Rule
+
+% Higest to lowest
+% ()
+% ^
+% -, ~
+% *, /,\
+% +, -
+% Relational: <,<=, >,>=,==,~=
+% &&
+% & ||
+%% 
+% 
+
+% Note
+x=4; % x=7 both evaluate true since order is left to right
+3<x<5 % is a logical error
+
+% 3<x && x<5
+%% 
+%% 2 Type Casting and ranges
+% Variables have a "*type"*, default number is double.  
+%% Variable Types
+% MATLAB has the following basic data types:
+% 
+% * Integers (int8, int16, ...)
+% * Single precision
+% * Double precision (*default*)
+% * Logical
+% * Charcter (chr) or string
+% 
+% The *range* of a variable is the smallest and largest value it can take.  
+% For example, uint8 ranges from 0 to 255 since $2^8=256$.
+% 
+% Variables of one type can be *cast* as another, for example, double as 
+% an integer. 
+
+whos % display variables, size, and type
+
+
+% 1.7 Type casting
+x=pi;               % double precision
+x=single(pi);       % single precision
+x=int8(-45)         % 8-bit signed integer
+x=uint32(2341)      % 32-bit unsigned (positive) integer
+x=logical(1)        % Logical variable
+
+
+% For more information about these and other data types
+help datatypes
+
+ 
+% Characters ('x') and Strings ("x")
+Achar='hello world'      % Use single quotes
+Astring="hello world"    % Use Double quotes
+
+
+x='5';                   % Different than x=5;
+X=5;
+
+whos
+
+
+%% 
+%% 3. Built-in Numerical Functions
+% MATLAB has hundreds of built-in functions.  Here are some basic numerical 
+% functions (See also L1.mlx).
+
+rem(14,3)       % difference rem(3,14)?
+mod(14,3)       % difference mod(3,14)?
+floor(5.8205)
+ceil(5.8205)
+fix(5.8205)
+fix(-5.8205)
+round(5.8205)
+round(pi,5)     % round to 5 places
+sign(-pi)
+
+x=73;
+n=3;
+nthroot(x,n)    % Nth root function
+%% 
+%% Common Pitfalls 
+% # Using = for relational operator
+% # Compound relations 3<x<5 vs. 3<x && x<5
+% # Confusing || and &&
+% # Confusing the order of arguments when passing to a function, for example 
+% rem(3,10) and rem(10,3)
+% # Confusing / and \ left and right division
+% # Adding a space in <= (2-character operator)
+% # Confusing *xor* and ||
+%% 
+%% Exercises
+% # cos(pi/2)==0
+% # 3 == 5+2
+% # (10>5)+2
+% # 10>5>2
+% # Find the numerical equivalent of 'x'
+% # Which character is 107?
+% # round(pi,3)
+% # fix(pi)
+ ##### SOURCE END #####
+ 
+ -->
+
+
+
+<div style="border-top: 1px solid #ccc;padding:20px 0px 0px 0px;"></div>
+<i>
+    <a href="http://www.unemath.com/quinlan/mat225/">Return to MAT225</a>
+</i>
+</div>
+
+
+
+
+</body></html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2018b"><title>Repetition via Looping</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.7999992370605px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: normal; text-align: left;  }
+.S1 { margin: 10px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 15px; font-weight: bold; text-align: left;  }
+.S2 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S3 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S4 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S5 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.S6 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: bold; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S10 { margin: 10px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: normal; text-align: left;  }
+.S11 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }
+.S12 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 18px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 17px; font-weight: bold; text-align: left;  }
+.S13 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }
+.S14 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234001159668px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S15 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 6px 45px 4px 13px; line-height: 17.234001159668px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Repetition via Looping</span></h1><h4  class = 'S1'><span>Topics:</span></h4><ul  class = 'S2'><li  class = 'S3'><span>for loops</span></li><li  class = 'S3'><span>while loops</span></li></ul><div  class = 'S4'><span style=' font-weight: bold;'>Learning Outcomes</span><span>:</span></div><ol  class = 'S2'><li  class = 'S3'><span>Understand when and how to apply loops</span></li><li  class = 'S3'><span>Know which looping structure is appropriate to use</span></li><li  class = 'S3'><span>Solve problems requiring the use of loops</span></li></ol><div  class = 'S4'><span style=' font-weight: bold;'>Book Sections</span><span>:  4.1 - 4.5</span></div><h2  class = 'S5'><span></span></h2><h2  class = 'S6'><span>1. Background</span></h2><div  class = 'S4'><span>Computers are built for repetition.  Loops are the primary mechanism to perform repetive tasks and to control the flow of the program.  </span></div><div  class = 'S4'><span>There are two kinds of loops, </span><span style=' font-weight: bold;'>for</span><span> and </span><span style=' font-weight: bold;'>while</span><span>.  For loops are typically used when the number of repetitions (or iterations) is know, whereas </span><span style=' font-style: italic;'>while loops</span><span> are made for when this information is unknown.  For example, a for loop may be more appropriate for summing the first 100 integers, but the while loop fits the situation in which a random walk on a grid is to occur (i.e., the number of steps is unknown, therefore continue until the end is reached).  </span></div><div  class = 'S4'><span></span></div><h2  class = 'S6'><span>2. For loop</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Print 'I am happy' 10 times \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:10</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'I am happy'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S10'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Print elements of a list \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Generate random list of 20 elements</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>list=rand(1,20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:20</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    disp(list(i));  </span><span style="color: rgb(34, 139, 34);">% prints the ith element</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S10'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Sum the squares of the first 5 positve integers \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>theSum=0;   </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Add each term one at a time</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    theSum=theSum+i^2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><h3  class = 'S11'><span>2.1 - Nested Loops</span></h3><div  class = 'S4'><span>Often it is necessary to repeat a subtask for each task.  For example, </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Find the sum of all elements in 2d-array \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize variables</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>theSum=0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>array=randi(10,5,4);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Iterate over each row per column</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>c=1:4</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">for </span><span>r=1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        theSum=theSum+array(r,c);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S4'><span></span></div><h2  class = 'S6'><span>3. While loops</span></h2><div  class = 'S4'><span>Although while loops can be made equivalent to a for loop, typically they are used when the number of iterations (e.g., the size of array) is unknown.  </span></div><div  class = 'S4'><span>Here are the for loop examples above translated into while loops.  </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Print 'I am happy' 10 times \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>i=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">while </span><span>i&lt;11</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    disp(</span><span style="color: rgb(160, 32, 240);">'I am happy'</span><span>);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    i=i+1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Print elements of a list \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Generate random list of 20 elements</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>list=rand(1,20);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize index variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>i=1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Loop over list</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">while </span><span>i&lt;=20</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    disp(list(i));  </span><span style="color: rgb(34, 139, 34);">% prints the ith element</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    i=i+1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><div  class = 'S10'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">%/ Sum the squares of the first 5 positve integers \%</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize variable</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>theSum=0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>i=0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Loop over 1:5 and add each term, one at a time</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">while </span><span>i&lt;5</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    theSum=theSum+i^2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    i=i+1;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><h2  class = 'S6'><span>3.1 Unknown iterations</span></h2><div  class = 'S4'><span>While loops are most effective when the number of iterations is unknown.  </span></div><h3  class = 'S11'><span>3.1.1 Example:  Random Walk</span></h3><div  class = 'S4'><span>Consider a simple random walk in which at each step exactly one coordinate changes according to the uniform distribution.  Random walks have applications in economics, population genetics, physics, computer science, mathematics, and psychology.  Often it is used as a substitute for Brownian motion and also used for simulations.   Random walks have been used to sample online social networks graph, used to suggest who to follow on Twitter, and estimate the size of the Web.  </span></div><div  class = 'S4'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize the grid size</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>n=6;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Initialize the walk counter and current location</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>k = 0; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>xk = 0; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>yk = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Start Visualization Sequence</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>pause </span><span style="color: rgb(160, 32, 240);">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>plot(xk,yk,</span><span style="color: rgb(160, 32, 240);">'r*'</span><span>,</span><span style="color: rgb(160, 32, 240);">'MarkerSize'</span><span>,16);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>axis([-n n -n n])</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>pause(0.5)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>  </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% The random walk, continue until end reached</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">while </span><span>abs(xk)&lt;n &amp;&amp; abs(yk)&lt; n</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% Simulate a single step (N,S,E,W)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    r = rand(1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% Move one direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">if </span><span>r &lt;= 0.25</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        yk = yk+1;      </span><span style="color: rgb(34, 139, 34);">% Move North</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">elseif </span><span>r &lt;= 0.50</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        xk = xk+1;      </span><span style="color: rgb(34, 139, 34);">% Move East</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">elseif </span><span>r &lt;= 0.75</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        yk = yk-1;      </span><span style="color: rgb(34, 139, 34);">% Move South</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        xk = xk-1;      </span><span style="color: rgb(34, 139, 34);">% Move West</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% Save the new location</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    k = k+1; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte">x</span><span>(k) = xk; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span class="warning_squiggle_rte">y</span><span>(k) = yk;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% Plot new point</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    plot(xk,yk,</span><span style="color: rgb(160, 32, 240);">'rs'</span><span>,</span><span style="color: rgb(160, 32, 240);">'MarkerSize'</span><span>,16);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    axis([-n n -n n])   </span><span style="color: rgb(34, 139, 34);">% freezes the frame</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    pause(0.5)          </span><span style="color: rgb(34, 139, 34);">% animation effect</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>pause </span><span style="color: rgb(160, 32, 240);">off</span></span></div></div><div class="inlineWrapper"><div  class = 'S9'></div></div></div><div  class = 'S10'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Alternative</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Replace the if-then-else above with a switch statement</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>r=randi(4);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">switch </span><span>r</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span>1</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        yk = yk+1;      </span><span style="color: rgb(34, 139, 34);">% Move North</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span>2</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        xk = xk+1;      </span><span style="color: rgb(34, 139, 34);">% Move East</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span>3</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        yk = yk-1;      </span><span style="color: rgb(34, 139, 34);">% Move South</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">case </span><span>4</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        xk = xk-1;      </span><span style="color: rgb(34, 139, 34);">% Move West    </span></span></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div><h3  class = 'S12'><span></span></h3><h3  class = 'S11'><span>3.2 Average Length of walk</span></h3><div  class = 'S4'><span>Calculate the average walk length for variable walk sizes.  </span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(34, 139, 34);">% Calculate the avg. walk length for variable walk sizes</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>m=10000;    </span><span style="color: rgb(34, 139, 34);">% number of simulations</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>n=5;        </span><span style="color: rgb(34, 139, 34);">% grid size</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>s=0;        </span><span style="color: rgb(34, 139, 34);">% sum of walks </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">for </span><span>i=1:m</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    [x,~]=randomwalks(n);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    s=s+numel(x);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper outputs"><div  class = 'S13'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'The average walk on grid size %i is %5.2f\n'</span><span>,n,s/m);</span></span></div><div  class = 'S14'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="ADE11D84" data-scroll-top="null" data-scroll-left="null" data-width="771" data-height="18" data-hashorizontaloverflow="false" data-testid="output_0" style="max-height: 261px; width: 801px;"><div class="textElement">The average walk on grid size 5 is 29.11</div></div></div></div><div class="inlineWrapper"><div  class = 'S15'></div></div></div><div  class = 'S4'><span></span></div><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">function </span><span>[x,y]=randomwalks(n)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% Initialize the walk counter and current location</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    k = 0; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    xk = 0; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    yk = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(34, 139, 34);">% The random walk, continue until end reached</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">while </span><span>abs(xk)&lt;n &amp;&amp; abs(yk)&lt; n</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(34, 139, 34);">% Simulate a single step (N,S,E,W)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        r = rand(1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(34, 139, 34);">% Move one direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">if </span><span>r &lt;= 0.25</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>            yk = yk+1;      </span><span style="color: rgb(34, 139, 34);">% Move North</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">elseif </span><span>r &lt;= 0.50</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>            xk = xk+1;      </span><span style="color: rgb(34, 139, 34);">% Move East</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">elseif </span><span>r &lt;= 0.75</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>            yk = yk-1;      </span><span style="color: rgb(34, 139, 34);">% Move South</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>            xk = xk-1;      </span><span style="color: rgb(34, 139, 34);">% Move West</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span style="color: rgb(34, 139, 34);">% Save the new location</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        k = k+1; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span class="warning_squiggle_rte">x</span><span>(k) = xk; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>        </span><span class="warning_squiggle_rte">y</span><span>(k) = yk; </span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>    </span><span style="color: rgb(0, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'></div></div><div class="inlineWrapper"><div  class = 'S9'><span style="white-space: pre;"><span style="color: rgb(0, 0, 255);">end</span></span></div></div></div></div><br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Repetition via Looping
+%% Topics:
+% * for loops
+% * while loops
+% 
+% *Learning Outcomes*:
+% 
+% # Understand when and how to apply loops
+% # Know which looping structure is appropriate to use
+% # Solve problems requiring the use of loops
+% 
+% *Book Sections*:  4.1 - 4.5
+%% 
+%% 1. Background
+% Computers are built for repetition.  Loops are the primary mechanism to perform 
+% repetive tasks and to control the flow of the program.  
+% 
+% There are two kinds of loops, *for* and *while*.  For loops are typically 
+% used when the number of repetitions (or iterations) is know, whereas _while 
+% loops_ are made for when this information is unknown.  For example, a for loop 
+% may be more appropriate for summing the first 100 integers, but the while loop 
+% fits the situation in which a random walk on a grid is to occur (i.e., the number 
+% of steps is unknown, therefore continue until the end is reached).  
+% 
+% 
+%% 2. For loop
+%%
+%/ Print 'I am happy' 10 times \%
+
+
+for i=1:10
+    disp('I am happy');
+end
+%% 
+% 
+
+%/ Print elements of a list \%
+
+
+% Generate random list of 20 elements
+list=rand(1,20);
+
+
+for i=1:20
+    disp(list(i));  % prints the ith element
+end
+%% 
+% 
+
+%/ Sum the squares of the first 5 positve integers \%
+
+
+% Initialize variable
+theSum=0;   
+
+% Add each term one at a time
+for i=1:5
+    theSum=theSum+i^2;
+end
+
+%% 
+% 
+%% 2.1 - Nested Loops
+% Often it is necessary to repeat a subtask for each task.  For example, 
+
+%/ Find the sum of all elements in 2d-array \%
+
+
+% Initialize variables
+theSum=0;
+array=randi(10,5,4);
+
+% Iterate over each row per column
+for c=1:4
+    for r=1:5
+        theSum=theSum+array(r,c);
+    end
+end
+%% 
+% 
+%% 3. While loops
+% Although while loops can be made equivalent to a for loop, typically they 
+% are used when the number of iterations (e.g., the size of array) is unknown.  
+% 
+% Here are the for loop examples above translated into while loops.  
+
+%/ Print 'I am happy' 10 times \%
+
+i=1;
+
+while i<11
+    disp('I am happy');
+    i=i+1;
+end
+
+%% 
+% 
+
+%/ Print elements of a list \%
+
+
+% Generate random list of 20 elements
+list=rand(1,20);
+
+% Initialize index variable
+i=1;
+
+% Loop over list
+while i<=20
+    disp(list(i));  % prints the ith element
+    i=i+1;
+end
+%% 
+% 
+
+%/ Sum the squares of the first 5 positve integers \%
+
+
+% Initialize variable
+theSum=0;
+i=0;
+
+% Loop over 1:5 and add each term, one at a time
+while i<5
+    theSum=theSum+i^2;
+    i=i+1;
+end
+
+%% 3.1 Unknown iterations
+% While loops are most effective when the number of iterations is unknown.  
+%% 3.1.1 Example:  Random Walk
+% Consider a simple random walk in which at each step exactly one coordinate 
+% changes according to the uniform distribution.  Random walks have applications 
+% in economics, population genetics, physics, computer science, mathematics, and 
+% psychology.  Often it is used as a substitute for Brownian motion and also used 
+% for simulations.   Random walks have been used to sample online social networks 
+% graph, used to suggest who to follow on Twitter, and estimate the size of the 
+% Web.  
+% 
+% 
+
+% Initialize the grid size
+n=6;
+
+% Initialize the walk counter and current location
+k = 0; 
+xk = 0; 
+yk = 0;
+
+
+% Start Visualization Sequence
+pause on
+plot(xk,yk,'r*','MarkerSize',16);
+axis([-n n -n n])
+pause(0.5)
+  
+
+% The random walk, continue until end reached
+while abs(xk)<n && abs(yk)< n
+
+    % Simulate a single step (N,S,E,W)
+    r = rand(1);
+    
+    % Move one direction
+    if r <= 0.25
+        yk = yk+1;      % Move North
+    elseif r <= 0.50
+        xk = xk+1;      % Move East
+    elseif r <= 0.75
+        yk = yk-1;      % Move South
+    else
+        xk = xk-1;      % Move West
+    end
+
+    % Save the new location
+    k = k+1; 
+    x(k) = xk; 
+    y(k) = yk;
+    
+    % Plot new point
+    plot(xk,yk,'rs','MarkerSize',16);
+    axis([-n n -n n])   % freezes the frame
+    pause(0.5)          % animation effect
+end
+
+pause off
+
+%% 
+% 
+
+% Alternative
+
+% Replace the if-then-else above with a switch statement
+
+r=randi(4);
+
+switch r
+    case 1
+        yk = yk+1;      % Move North
+    case 2
+        xk = xk+1;      % Move East
+    case 3
+        yk = yk-1;      % Move South
+    case 4
+        xk = xk-1;      % Move West    
+end
+%% 
+%% 3.2 Average Length of walk
+% Calculate the average walk length for variable walk sizes.  
+
+% Calculate the avg. walk length for variable walk sizes
+
+m=10000;    % number of simulations
+n=5;        % grid size
+
+s=0;        % sum of walks 
+for i=1:m
+    [x,~]=randomwalks(n);
+    s=s+numel(x);
+end
+
+fprintf('The average walk on grid size %i is %5.2f\n',n,s/m);
+
+%% 
+% 
+
+function [x,y]=randomwalks(n)
+
+    % Initialize the walk counter and current location
+    k = 0; 
+    xk = 0; 
+    yk = 0;
+
+
+    % The random walk, continue until end reached
+    while abs(xk)<n && abs(yk)< n
+    
+        % Simulate a single step (N,S,E,W)
+        r = rand(1);
+        
+        % Move one direction
+        if r <= 0.25
+            yk = yk+1;      % Move North
+        elseif r <= 0.50
+            xk = xk+1;      % Move East
+        elseif r <= 0.75
+            yk = yk-1;      % Move South
+        else
+            xk = xk-1;      % Move West
+        end
+    
+        % Save the new location
+        k = k+1; 
+        x(k) = xk; 
+        y(k) = yk; 
+    end
+
+end
+##### SOURCE END #####
+
+-->
+
+
+
+<div style="border-top: 1px solid #ccc;padding:20px 0px 0px 0px;"></div>
+<i>
+    <a href="http://www.unemath.com/quinlan/mat225/">Return to MAT225</a>
+</i>
+</div>
+
+
+
+
+</body></html>
